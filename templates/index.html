@@ -1,0 +1,572 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+		      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="" type="image/png">
+        <title>{{menu.home}}</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+            		<link rel="stylesheet" href="{% static 'css/testimonials.css'%}">
+            		<link rel="stylesheet" href="{% static 'css/testimonials.css.map'%}">
+            		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+            		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+            		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+            		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+            		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+            		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+            <style>
+            .causes_item .causes_img .c_parcent span:before {
+                    content: attr(data-content);
+                    position: absolute;
+                    right: -10px;
+                    bottom: 0px;
+                    background: #ea2c58;
+                    color: #fff;
+                    padding: 0px 5px;
+            }
+
+            .testi_item_text{
+            	color: black;
+            	height: 410px;
+            	overflow-y: scroll;
+            	-ms-overflow-style: none;
+            }
+
+            .testi_item_text::-webkit-scrollbar{
+            	display: none;
+            }
+
+            .testi_left_text:hover{
+            	color: white;
+            }
+
+            #perc{
+            		width:100%;
+            }
+            .langs {
+                line-height: 28px;
+                border: 1px solid #eeeeee;
+                display: inline-block;
+                background: #f9f9ff;
+                padding: 0px 19px;
+                font-size: 12px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                color: #777777;
+                -webkit-transition: all 300ms linear 0s;
+                -o-transition: all 300ms linear 0s;
+                transition: all 300ms linear 0s;
+                margin-right: 1px;
+                margin-top: 8px;
+
+            }
+            a:hover{
+            text-decoration:none !important;
+            }
+
+
+
+            .flex-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: #1a7f17;
+                    min-height:230px;
+                    justify-content: center;
+            }
+
+
+            .flex-container > div {
+                    background-color: #1a7f17;
+                    margin:30px;
+            }
+            @media (max-width: 575px){
+            .header_social {
+                width: 80px !important;
+                padding: 5px;
+            }
+            }
+
+            @media (max-width:575px){
+            	.top_menu {
+            		display: flex;
+            	}
+            	.list , .header_social{
+            	width:120px;
+            	}
+
+            }
+            .nav-link{
+            font-family: 'Raleway', sans-serif;
+            }
+            a:hover{
+            text-decoration:none;
+            }
+            .langs:hover{
+            color:white !important;
+            background-color: #1fb615 !important;
+            }
+            .ac_btn:hover{
+            background:#ff0000 !important;
+            }
+
+            .icon-bar{
+            background:#1a7f17 !important;
+            }
+            @media (max-width: 575px){
+            .ac_btn{
+            padding: 0px 4px !important;
+            }
+            }
+            .banner_area .banner_inner .overlay {
+                background: url("{%static 'panel.jpg'%}") no-repeat scroll center center;
+
+            }
+            footer{
+            	background: url("{%static 'footerback.png'%}") no-repeat center center !important;
+            	background-size: cover !important;
+            }
+            footer p{
+            color:white !important;
+            }
+            @media (max-width: 768px){
+            footer{
+            background: url("{%static 'footerback.jpg'%}") no-repeat center center !important;
+            padding:0 !important;
+            }
+            }
+            .footer-social i{
+            color:white !important;
+            }
+            .input-group input{
+            background: white !important;
+            }
+            footer{
+            font-family: "Arimo" , sans-serif;
+            line-height: 1.5;
+            font-size: 1rem;
+            font-weight: 300;
+            }
+            .single-footer-widget .sub-btn {
+                background: #1fb615 !important;
+            }
+
+            @media (min-width: 992px){
+            .col-lg-4 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 100% !important;
+                flex: 0 0 33.333333%;
+                max-width: 100%;
+            }}
+            .event_slider .owl-dots .owl-dot.active {
+                background: #1fb615 !important;
+            }
+            h4:hover,a:hover {
+              color: #1a7f17 !important;
+            }
+            .social-margin{
+            margin-left:10px;
+            }
+</style>
+	</head>
+    <body>
+
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+           	<div class="top_menu row m0">
+           		<div class="container">
+					<div class="float-left">
+						<ul class="list header_social">
+							<li><a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://www.instagram.com/animal.care.club"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/19061939"><i class="fa fa-linkedin"></i></a></li>
+
+						</ul>
+					</div>
+					<div class="float-right">
+
+
+
+                                      <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeeng'%}">EN</a>
+									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeaz'%}">AZ</a>
+
+                        <!-- <a class="ac_btn" href="#">Donate Now</a> -->
+					</div>
+           		</div>
+           	</div>
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="{{home.logo.url}}" style="height:70px;" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								{%if language.language_name == "English"%}
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{%url 'animalcare:adoption' 'en' %}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.adoption}}</a></li>
+
+								{%else%}
+								<li class="nav-item active"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{%url 'animalcare:adoption' 'az' %}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.adoption}}</a></li>
+
+                {%endif%}
+							</ul>
+
+						</div>
+					</div>
+            	</nav>
+            </div>
+
+        </header>
+        <!--================Header Menu Area =================-->
+
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" style="background:url( {%static 'background.jpg'%} ) no-repeat scroll center center;"></div>
+				<div class="container">
+					<div class="banner_content text-center">
+
+						<h3></h3>
+						<!-- <a class="main_btn" style="background:#ff0000;" href="#">Donate Now</a> -->
+
+					</div>
+				</div>
+            </div>
+		</section>
+		<section>
+            	<div class="flex-container">
+							<div class="dontation_item yellow" style="margin-top:30px;background-color:#1a7f17;border-style:solid;border-color:white;border-width:1px;height:170px;width:350px;">
+								<div class="media">
+									<div class="media-body">
+										<h4>{{home.total_donation_title}}</h4>
+										<p>{{home.total_donation_text}}</p>
+									</div>
+									<div class="d-flex">
+										<h3>{{home.total_donation_amount}}</h3>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="dontation_item pink" style="margin-top:30px;background-color:#1a7f17;border-style:solid;border-color:white;border-width:1px;height:170px; width:350px;">
+								<div class="media">
+									<div class="media-body">
+										<h4>{{home.total_volunteers_title}}</h4>
+										<p>{{home.total_volunteers_text }}</p>
+									</div>
+									<div class="d-flex">
+										<h3>{{home.total_volunteers_amount}}</h3>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="dontation_item green" style="margin-top:3s0px;background-color:#1a7f17;border-style:solid;border-color:white;border-width:1px;height:170px;width:350px;">
+								<div class="media">
+									<div class="media-body">
+										<h4>{{home.future_plans_title}}</h4>
+										<p>{{home.future_plans_text}}</p>
+									</div>
+									<div class="d-flex">
+										<h3>{{home.future_plans_amount}}</h3>
+									</div>
+								</div>
+							</div>
+				</div>
+
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Welcome Area =================-->
+        <section class="welcome_area p_120">
+        	<div class="container">
+        		<div class="row welcome_inner">
+        			<div class="col-lg-6">
+        				<div class="welcome_text">
+        					<h4 style="font-family: 'Poppins', sans-serif;color:#1fb615">{{home.about_us_title}}</h4>
+        					<p style="font-family: 'Arimo', sans-serif;color: black;">{{home.about_us_text}}</p>
+        					<div class="row">
+        						<div class="col-sm-4">
+        							<div class="wel_item">
+        								<i class="fa fa-paw" style="color:#41ea2c;"></i>
+        								<h4>{{home.total_donation_amount}}</h4>
+        								<p>{{home.total_donation_title}}</p>
+        							</div>
+        						</div>
+        						<div class="col-sm-4">
+        							<div class="wel_item">
+        								<i class="fa fa-cubes" style="color:#41ea2c;"></i>
+        								<h4>{{home.total_projects_amount}}</h4>
+        								<p>{{home.total_projects_title}}</p>
+        							</div>
+        						</div>
+        						<div class="col-sm-4">
+        							<div class="wel_item">
+        								<i class="fa fa-users" style="color:#41ea2c;"></i>
+        								<h4>{{home.total_volunteers_amount}}</h4>
+        								<p>{{home.total_volunteers_title}}</p>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-6" style="margin-top:100px;">
+        				<div class="welcome_img" style="background:#1aad1a;">
+        					<img class="img-fluid" style="width:500px;" src="{{home.image_welcome_acc.url}}" alt="">
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Welcome Area =================-->
+
+        <!--================Causes Area =================-->
+
+        <!--================End Causes Area =================-->
+
+        <!--================Feature Area =================-->
+        <!-- <section class="feature_area p_120">
+        	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        	<div class="container">
+        		<div class="row testimonials_inner">
+        			<div class="col-lg-4">
+        				<div class="testi_left_text">
+        					<h4>{{home.testimonial_title}}</h4>
+        					<p>{{home.testimonial_text}}</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-8">
+        				<div class="testi_slider owl-carousel">
+							{%for donor_review in testimonial%}
+							<div class="item">
+								<div class="testi_item">
+									<img src="{{donor_review.donor_image.url}}" style="width:180px; height:180px;" alt="">
+									<p>{{donor_review.donor_description}}</p>
+									<h4>{{donor_review.donor_name}}</h4>
+									<h6>{{donor_review.donor_is_who}}</h6>
+								</div>
+							</div>
+							{%endfor%}
+						</div>
+        			</div>
+        		</div>
+        	</div>
+        </section> -->
+        <!--================End Feature Area =================-->
+
+        <!--================Event Area =================-->
+		{%if language.language_name == "English"%}
+		<section class="event_area p_120">
+      {% for payment in homePro.payments.all %}
+          {{payment.payment |safe}}
+      {% endfor %}
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>{{homePro.headerNews}}</h2>
+        			<p> {{homePro.TextNews}}</p>
+        		</div>
+        		<div class="event_slider owl-carousel">
+        			{%for event in event%}
+        			<div class="item">
+        				<div class="event_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<img src="{{event.image_main}}" style="width:240px;height:240px;object-fit: cover;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="{{ event.get_absolute_url_eng}}">{{event.date}}</a>
+        							<a href="{{ event.get_absolute_url_eng}}"><h4>{{event.title_in_eng}}</h4></a>
+        							<p>{{event.event_little_detail_in_eng}}</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+					{%endfor%}
+
+				</div>
+        	</div>
+        </section>
+		{%else%}
+
+		<section class="event_area p_120">
+          {% for payment in homePro.payments.all %}
+              {{payment.payment |safe}}
+          {% endfor %}
+        	<div class="container">
+        		<div class="main_title">
+              <h2>{{homePro.headerNews}}</h2>
+        			<p> {{homePro.TextNews}}</p>
+            </div>
+        		<div class="event_slider owl-carousel">
+        			{%for event in event%}
+        			<div class="item">
+        				<div class="event_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<img src="{{event.image_main}}" style="width:240px;height:240px;object-fit: cover;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="{{ event.get_absolute_url_az}}">{{event.date}}</a>
+        							<a href="{{ event.get_absolute_url_az}}"><h4>{{event.title_in_az}}</h4></a>
+        							<p>{{event.event_little_detail_in_az}}</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+					{%endfor%}
+
+				</div>
+        	</div>
+        </section>
+		{%endif%}
+        <!--================End Event Area =================-->
+
+        <!--================Testimonials Area =================-->
+        <section class="testimonials_area p_120" style="background-color: #1a7f17;">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="" style="transform: translateY(-35.4894px); "></div>
+
+        	<div class="container" >
+        		<div class="row testimonials_inner">
+        			<div class="col-lg-4">
+        				<div class="testi_left_text">
+        					<h4 style="color: white;">{{home.testimonial_title}}</h4>
+        					<p style="color:white;">{{home.testimonial_text}}</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-8">
+        				<div class="testi_slider owl-carousel">
+							{%for donor_review in donor_review%}
+							<div class="item">
+								<div class="testi_item" style="background-color: white;">
+									<img src="{{donor_review.donor_image.url}}" style="width:180px; height:180px;" alt="">
+									<p class="testi_item_text">{{donor_review.donor_description}}</p>
+									<h4>{{donor_review.donor_name}}</h4>
+									<h6>{{donor_review.donor_is_who}}</h6>
+								</div>
+							</div>
+							{%endfor%}
+						</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Testimonials Area =================-->
+
+        <!--================Clients Logo Area =================-->
+
+        <!--================End Clients Logo Area =================-->
+
+
+        <!--================ start footer Area  =================-->
+        <footer class="footer-area section_gap" style="padding-bottom:50px;background-size: cover;">
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-4  col-md-6 col-sm-6">
+                					<h6 class="footer_title">Animal Care Club</h6>
+                					<p><i class="fa fa-map-marker"></i>	 via Baku, Azerbaijan</p>
+                							<p><i class="fa fa-envelope"></i>	animalcare.mailbox@gmail.com</p>
+                                        <div class="single-footer-widget">
+
+
+
+                							<!--<p><i class="fa fa-instagram"></i>  Instagram: @animal.care.club</p>
+                							<p><i class="fa fa-facebook"></i>  Facebook: fb.com/animalcareclub</p>-->
+                							<div class="col-lg-4 col-md-4 footer-social" style="width:100%;padding:0;">
+                                        <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa-2x fa fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/animal.care.club" class="social-margin"><i class="fa-2x fa fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/19061939" class="social-margin"><i class="fa-2x fa fa-linkedin"></i></a>
+                                    		</div>
+                						</div>
+                                    </div>
+                                    <div class="col-lg-4  col-md-6 col-sm-6">
+                                        <div class="single-footer-widget">
+                                            <h6 class="footer_title">NON-PROFIT ORGANIZATION FOR ANIMAL PROTECTION</h6>
+                                            <p>Our mission is to reach out our helping hand to our four-legged friends. ACC
+                does not operate under any sponsor support. We receive financial aid for the animals from
+                charity campaigns and events that we organize ourselves</p>
+
+                						</div>
+                                    </div>
+                                    <!-- <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="single-footer-widget">
+                                            <h6 class="footer_title">SIGN ACC NewsletteR</h6>
+                                            <p>Stay up to date on the latest news delivered straight to your inbox!</p>
+                                            <div id="mc_embed_signup">
+                                                <form target="_blank"  method="get" class="subscribe_form relative">
+                                                    <div class="input-group d-flex flex-row">
+                                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
+                                                    </div>
+                                                    <div class="mt-10 info"></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                                <div class="border_line"></div>
+                                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                                    <p class="col-lg-8 col-md-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                    <!--<div class="col-lg-4 col-md-4 footer-social">
+                                        <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa fa-facebook"></i></a>
+                                        <a href="instagram.com/animal.care.club"><i class="fa fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/19061939"><i class="fa fa-linkedin"></i></a>
+
+                                    </div> -->
+                                </div>
+                            </div>
+        </footer>
+		<!--================ End footer Area  =================-->
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %} "></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+    </body>
+</html>

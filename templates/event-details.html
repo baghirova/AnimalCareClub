@@ -1,0 +1,1109 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="" type="image/png">
+        <title>{{menu.home}}</title>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/az_AZ/sdk.js#xfbml=1&version=v4.0"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
+        <!-- main css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+		<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+		<link rel="stylesheet" href="{% static 'css/testimonials.css'%}">
+		<link rel="stylesheet" href="{% static 'css/testimonials.css.map'%}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		{%if language.language_name == "English"%}
+		<meta property="og:url"           content="{{event.get_absolute_url_eng}}" />
+		{%else%}
+		<meta property="og:url"           content="{{event.get_absolute_url_az}}" />
+		{%endif%}
+		<meta property="og:title" content="{{event_title}}">
+		<meta property="og:image" content="{{event_main_image}}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Put this script tag to the <head> of your page -->
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+<!-- Put this script tag to the place, where the Share button will be -->
+
+		<style>
+        .iframe-youtube{
+        width:50%;
+        height:400px;
+        margin:auto;
+        }
+		@media (max-width:675px){
+		.iframe-youtube{
+        width:95%;
+		height:auto;
+		}		
+		}
+        
+		iframe{
+        margin-top:60px;
+        text-align:center;
+        }
+        .blocks {display: inline-block; border: solid 1px red; width: 100px;}
+    .wrap{
+            width:320px;
+        }
+        .modal.and.carousel {
+  position: fixed; // Needed because the carousel overrides the position property
+}
+.icon-bar{
+background:#1a7f17 !important;
+}
+p{
+font-family: 'Arimo', sans-serif;
+}
+ul{
+font-family: 'Oxygen', sans-serif;
+color: black;
+}
+h2{
+font-family: 'Oxygen', sans-serif;
+color: black;
+}
+
+body{
+font-size:17px;
+}
+a{
+color:#1fb615;
+}
+@media (max-width:575px){
+	.top_menu {
+		display: flex;
+	}
+	.list , .header_social{
+	width:120px;
+	}
+	}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-link{
+font-family: 'Raleway', sans-serif;
+}
+.aaa{
+	width:100%;
+	    }
+@media (max-width: 575px){
+.header_social {
+    width: 80px !important;
+    padding: 5px;
+}
+}
+@media (max-width: 575px){
+.ac_btn{
+padding: 0px 4px !important;
+}
+}
+.banner_area .banner_inner .overlay {
+    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+	
+}
+a:hover{
+text-decoration:none;
+}
+.langs:hover{
+color:white !important;
+background-color: #1fb615 !important;
+}
+.ac_btn:hover{
+background:#ff0000 !important;
+}
+.langs {
+    line-height: 28px;
+    border: 1px solid #eeeeee;
+    display: inline-block;
+    background: #f9f9ff;
+    padding: 0px 19px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #777777;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+    margin-right: 1px;
+    margin-top: 8px;
+}
+footer{
+
+background: url("{%static 'footerback.png'%}") no-repeat center center !important;
+background-size: cover !important;
+}
+footer p{
+color:white !important;
+}
+@media (max-width: 768px){
+footer{
+background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
+padding:0 !important;
+}
+}
+.footer-social i{
+color:white !important;
+}
+.input-group input{
+background: white !important;
+}
+footer{
+font-family: "Arimo" , sans-serif;
+line-height: 1.5;
+font-size: 1rem;
+font-weight: 300;
+}
+.single-footer-widget .sub-btn {
+    background: #1fb615 !important;
+}
+.social-margin{
+margin-left: 10px;
+}
+@media (min-width: 992px){
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 33.333333%;
+    max-width: 100%;
+}}
+@media (max-width: 768px){
+footer{
+background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
+padding:0 !important;
+}
+}
+@media (max-width: 768px){
+.center{
+width:auto !important;
+display:block;
+margin:auto;
+max-width:100%;
+}
+}
+
+@media (max-width: 580px){
+.social_div{
+width:70% !important;
+}
+}
+
+
+
+@media (max-width: 440px){
+.social_div{
+width:80% !important;
+}
+}
+@media (max-width: 408px){
+.social_div{
+width:90% !important;
+
+}
+}
+</style>
+
+
+
+    </head>
+    <body>
+
+       
+        <header class="header_area">
+           	<div class="top_menu row m0" id="language_area">
+           		<div class="container">
+					<div class="float-left">
+						<ul class="list header_social" style="width:auto;">
+							<li><a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://www.instagram.com/animal.care.club"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/19061939"><i class="fa fa-linkedin"></i></a></li>
+							
+						</ul>
+					</div>
+					<div class="float-right">
+
+                              
+       <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a>
+       <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
+
+                                      
+
+                        <a class="ac_btn" href="#">Donate Now</a>
+					</div>
+           		</div>
+           	</div>
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="{{home.logo.url}}" style="height:70px;" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								{%if language.language_name == "English"%}
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
+
+								{%else%}
+								<li class="nav-item active"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
+								{%endif%}
+							</ul>
+
+						</div>
+					</div>
+            	</nav>
+            </div>
+
+        </header>
+        <!--================Header Menu Area =================-->
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Event Details Area =================-->
+
+<section style="width:100%;margin:auto;">
+<p></p>
+<p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+<p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+<p></p>
+    <p></p>
+    <p></p>
+<p></p>
+    <p></p>
+    <p></p>
+
+    <div style="width:100%;margin:auto;margin-top:50px;">
+			<!-- {%if language.language_name == "English" %} 
+             <div class="fb-share-button" id="fb_share" data-href="{{event.get_absolute_url_eng}}" data-layout="button" data-size="large"></div> 
+		 <script type="text/javascript">
+document.write(VK.Share.button(false,{type: "round_nocount", text: "Share"}));
+</script>
+			<a href="http://vk.com/share.php?url={{event.get_absolute_url_eng}}" target="_blank">Share</a>
+			<a href="https://twitter.com/share?ref_src={{event.get_absolute_url_eng}}" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			{%else%}
+			<div class="fb-share-button" id="fb_share" data-href="{{event.get_absolute_url_az}}" data-layout="button" data-size="large"></div>
+			
+			<a href="http://vk.com/share.php?url={{event.get_absolute_url_az}}" target="_blank" style="background:rgb(98, 135, 174);font-weight: 500;font-size: 13px;line-height: 26px;color:white;">Share</a>
+			<a href="https://twitter.com/share?ref_src={{event.get_absolute_url_az}}" class="twitter-share-button" data-size='large' data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			{%endif%} -->
+			
+			
+			<script>
+			
+				text="{{ request.build_absolute_uri }}";
+				
+				title="{{event_title}}";
+				
+				
+				desc="{{event_little_details}}";
+				
+				function face(){
+					window.open('http://www.facebook.com/sharer.php?u=' + text);
+				}
+				function vk(){
+					window.open('http://vk.com/share.php?url=' + text + '&title=' + title + '&comment=' + desc);
+				}
+				function telegram(){
+					window.open('https://t.me/share/url?url=' + text + '&text=' + title);
+				}
+				function linkedin(){
+					window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + text + '&title=' + title + '&summary=' + desc) ;
+				}
+				function twitter(){
+					window.open('https://twitter.com/intent/tweet?url=' + text + '&text=' + desc) ;
+				}
+			</script>
+			
+		<div style="margin:auto;width:348px;height:64px;padding-bottom:50px;" class="social_div">
+			
+             <button onclick="face();" style="width:51px;height:51px;background:#3b5998;box-shadow:none;border:0;border-radius:50%;"><i class="fa-2x fa fa-facebook" style="color: white;"></i></button>
+			 
+			 <button onclick="vk();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><i class="fa-2x fa fa-vk" style="color: white;"></i></button>
+			 	
+			
+			<button onclick="telegram();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><span class="iconify" style="color:white;width:34px;height:34px;" data-icon="fa-brands:telegram-plane" data-inline="true"></span></button>
+			 
+			 
+			<button onclick="linkedin();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-linkedin" style="color: white;"></i></button>
+			 
+			<button onclick="twitter();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-twitter " style="color: white;"></i></button>			 
+			
+			
+		</div>	
+        <p></p>
+		<h2 style="text-align:center;">{{event_title}}<i class="fa-2x fa fa-telegram" style="color: white;"></i></h2>
+                {%if event_main_image %}
+
+
+                  <img src="{{event_main_image}}" alt="Los Angeles" style="width:auto;max-height:500px;border: 3px solid #1a7f17;" class="center img-thumbnail">
+
+                {%endif%}
+
+			<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;" >
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div style=" width:100%;margin:auto;">
+
+                        <div class="row event_text_inner" style=" width:90%;%;margin:auto;">
+                            <div class="col-lg-12" style="margin-top:10px;">
+                                <div class="left_text" >
+                                    <ul class="list" style="width:100%;text-align:center;">
+                                        <li><a href="#" ><i class="lnr lnr-calendar-full"></i>{{event_date}} </a></li>
+                                        <li><a href="#"><i class="lnr lnr-apartment"></i>{{address}}</a></li>
+                                        <li><a href="#"><i class="lnr lnr-location"></i>{{city}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div >
+                                <div >
+
+                                    <p style="text-align:justify;">{{event_details}}</p>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+    {%if report%}
+    <div class="container">
+              <table class="table" style="width:50%; margin:auto;">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Ad (Name)</th>
+                  <th scope="col">Məbləğ (Amount)</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                {%for report in report%}
+                            <tr>
+                              <th scope="row">{{ forloop.counter }} </th>
+                              <td>{{report.donor_name}}</td>
+                              <td>{{report.amount}}</td>
+                            </tr>
+                {%endfor%}
+              </tbody>
+              </table>
+    </div>
+    {%endif%}
+	{%if event_iframe%}
+		
+            <iframe class="iframe-youtube" style="display:block;margin:auto;margin-top:50px;margin-bottom:30px;" width="50%" height="auto" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	{%endif%}
+
+
+<div class="container">
+	<div class="row">
+		<div class="row" style="width:90%; margin:auto;">
+		{%if event_img_1%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_1}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_1}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+            {%if event_img_2%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_2}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_2}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+
+            {%if event_img_3%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_3}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_3}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+            {%if event_img_4%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_4}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_4}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+	{%if event_img_5%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_5}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_5}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+
+
+
+            {%if event_img_6%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_6}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_6}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+            {%if event_img_7%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_7}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_7}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+            {%if event_img_8%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_8}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_8}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+
+
+
+            {%if event_img_9%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_9}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_9}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			
+			{%if event_img_10%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_10}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_10}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			
+			{%if event_img_11%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_11}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_11}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_12%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_12}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_12}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_13%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_13}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_13}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_14%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_14}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_14}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_15%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_15}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_15}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_16%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_16}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_16}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_17%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_17}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_17}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_18%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_18}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_18}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_19%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_19}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_19}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_20%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_20}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_20}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+		{%if event_img_21%}
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_21}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_21}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+		{%if event_img_22%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_22}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_22}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+		{%if event_img_23%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_23}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_23}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_24%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_24}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_24}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_25%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_25}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_25}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_26%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_26}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_26}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_27%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_27}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_27}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+
+           {%if event_img_28%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_28}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_28}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_29%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_29}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_29}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_30%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_30}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_30}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_31%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_31}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_31}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_32%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_32}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_32}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_33%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_33}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_33}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_34%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_34}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_34}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_35%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_35}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_35}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_36%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_36}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_36}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_37%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_37}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_37}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_38%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_38}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_38}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_39%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_39}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_39}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+			{%if event_img_40%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{event_img_40}}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{{event_img_40}}"
+                         alt="Another alt text">
+                </a>
+            </div>
+		{%endif%}
+        </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" style="width:auto; margin:auto;margin-top:100px;" >
+                <div class="modal-content" style="margin:auto;">
+                    <div class="modal-header" style:>
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="btn btn-success" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" style="max-height:1200px;width:60%;display:block;margin:auto;"class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-success" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+	
+	
+     <script>
+                let modalId = $('#image-gallery');
+$(document)
+  .ready(function () {
+    loadGallery(true, 'a.thumbnail');
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current) {
+      $('#show-previous-image, #show-next-image')
+        .show();
+      if (counter_max === counter_current) {
+        $('#show-next-image')
+          .hide();
+      } else if (counter_current === 1) {
+        $('#show-previous-image')
+          .hide();
+      }
+    }
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+    function loadGallery(setIDs, setClickAttr) {
+      let current_image,
+        selector,
+        counter = 0;
+      $('#show-next-image, #show-previous-image')
+        .click(function () {
+          if ($(this)
+            .attr('id') === 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+      function updateGallery(selector) {
+        let $sel = selector;
+        current_image = $sel.data('image-id');
+        $('#image-gallery-title')
+          .text($sel.data('title'));
+        $('#image-gallery-image')
+          .attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
+      if (setIDs == true) {
+        $('[data-image-id]')
+          .each(function () {
+            counter++;
+            $(this)
+              .attr('data-image-id', counter);
+          });
+      }
+      $(setClickAttr)
+        .on('click', function () {
+          updateGallery($(this));
+        });
+    }
+  });
+// build key actions
+$(document)
+  .keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+          $('#show-previous-image')
+            .click();
+        }
+        break;
+      case 39: // right
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+          $('#show-next-image')
+            .click();
+        }
+        break;
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+    </script>
+    
+</section>
+        <!--================End Event Details Area =================-->
+        
+        <!--================ start footer Area  =================-->
+        <footer class="footer-area section_gap" style="padding-bottom:50px;margin-top:75px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-4  col-md-6 col-sm-6">
+					<h6 class="footer_title">Animal Care Club</h6>
+					<p><i class="fa fa-map-marker"></i>	 via Baku, Azerbaijan</p>
+							<p><i class="fa fa-envelope"></i>	animalcare.mailbox@gmail.com</p>
+                        <div class="single-footer-widget">
+                            
+							
+                            
+							<!--<p><i class="fa fa-instagram"></i>  Instagram: @animal.care.club</p>
+							<p><i class="fa fa-facebook"></i>  Facebook: fb.com/animalcareclub</p>-->
+							<div class="col-lg-4 col-md-4 footer-social" style="width:100%;padding:0;">
+                        <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa-2x fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/animal.care.club" class="social-margin"><i class="fa-2x fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/19061939" class="social-margin"><i class="fa-2x fa fa-linkedin"></i></a>
+                        
+                    </div>
+						</div>
+						
+                    </div>
+                    <div class="col-lg-4  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">NON-PROFIT ORGANIZATION FOR ANIMAL PROTECTION</h6>
+                            <p>Our mission is to reach out our helping hand to our four-legged friends. ACC
+does not operate under any sponsor support. We receive financial aid for the animals from
+charity campaigns and events that we organize ourselves</p>
+							
+						</div>
+                    </div>				
+                    <!-- <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">SIGN ACC Newsletter</h6>
+                            <p>Stay up to date on the latest news delivered straight to your inbox!</p>		
+                            <div id="mc_embed_signup">
+                                <form target="_blank"  method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>		
+                                    </div>									
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> -->
+                    						
+                </div>
+                <div class="border_line"></div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-md-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <!--<div class="col-lg-4 col-md-4 footer-social">
+                        <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa fa-facebook"></i></a>
+                        <a href="instagram.com/animal.care.club"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/19061939"><i class="fa fa-linkedin"></i></a>
+                        
+                    </div> -->
+                </div>
+            </div>
+        </footer>
+		<!--================ End footer Area  =================-->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %} "></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+    </body>
+</html>

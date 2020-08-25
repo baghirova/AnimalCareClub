@@ -1,0 +1,8 @@
+Animalcare/settings.py
+Animalcare/__pycache__/*
+payment/__pycache__/*
+home/migrations/*
+home/__pycache__/*
+db.sqlite3
+env/*
+media/adoption_image/*
