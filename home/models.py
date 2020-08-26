@@ -24,7 +24,7 @@ class Menu(models.Model):
 
     adoption = models.CharField(max_length=20)
     language = models.ForeignKey(Languages, on_delete=models.CASCADE)
-
+    temporary - models.CharField(max_length=1)
 
     def __str__(self):
 
